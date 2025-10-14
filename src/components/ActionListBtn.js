@@ -15,7 +15,7 @@ export default ActionListBtn = ({route, iconName, titulo}) => {
         onPress={() => {navigation.setOptions({title : route})}} // SETOPTIONS definido de maneiro temporária para depois adicionar mais telas
         style={{alignItems : 'center', flexDirection : 'row', justifyContent : 'space-evenly', width : '100%'}}>
         <View style={{alignItems : 'center', flexDirection : 'row', gap: 16}}>
-          <Icon name={iconName} size={30} color="#005E7C"/>
+          <Icon name={iconName} size={30} color=""/>
           <Text style={estilo.secTitle}>{titulo}</Text>
         </View>
         <Icon name="angle-right" size={26}/>

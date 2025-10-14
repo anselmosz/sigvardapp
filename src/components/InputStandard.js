@@ -12,8 +12,8 @@ export default InputStandard = ({texto, icone, icone2, senhaAtiva}) => {
         label={texto}
         value={text}
         mode='outlined'
-        activeOutlineColor='#0094C6'
-        activeUnderlineColor='#0094C6'
+        activeOutlineColor='#F6AA1C'
+        // activeUnderlineColor='#F6AA1C'
         onChangeText={text => setText(text)}
         left={<TextInput.Icon icon={icone} color="#000"/>}
         maxLength={100}

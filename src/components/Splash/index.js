@@ -12,8 +12,9 @@ export default props => { // Configurações da tela de SPLASH
 
   return (
     <View style={[estilo.container, {gap : 20}]}>
-      <Image source={require('../../assets/image.png')} style={estilo.imagemPerfil}/>
+      {/* <Image source={require('../../assets/image.png')} style={estilo.imagemPerfil}/> */}
       <Text style={[estilo.mainTitle, {color: "#FFF"}]}>Sigvard</Text>
+      <Text style={[estilo.mainTitle, {color: "#FFF"}]}>Burguers</Text>
       {/* <ProgressBar progress={0.5} style={estilo.loadingBar} color={MD3Colors.primary20} indeterminate/> */}
       <ActivityIndicator size={50} color="#FFF"/>
       <BtnNavigate corFundo={"#000"} corTexto={"#fff"} route={'Login'} titulo={'Login'}/>

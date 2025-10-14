@@ -5,7 +5,7 @@ export default estilo = StyleSheet.create({
   container: {
     flex: 1,
     gap : 20,
-    backgroundColor: '#005E7C',
+    backgroundColor: '#F2AF29',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -31,7 +31,22 @@ export default estilo = StyleSheet.create({
     alignContent : "center",
     // boxShadow : "0px 5px 10px rgba(0,0,0,0.5)"
   },
-  
+
+  boxInputHor: {
+    flexDirection: "row",
+    alignItems:"center",
+    justifyContent: "center",
+    gap: 8,
+  },
+
+  inputBoxUnique: {
+    width: 40,
+    fontSize: 18,
+    backgroundColor: "#9292924d",
+    borderRadius: 5,
+    textAlign: "center"
+  },
+
   header : {
     height : 80,
     borderBottomColor : "#000",
@@ -53,6 +68,12 @@ export default estilo = StyleSheet.create({
     borderRadius: 10
   },
 
+  imagemBtn : {
+    width: 40,
+    height: 40,
+    borderRadius: 200,
+  },
+
   loadingBar : {
     backgroundColor : '#FFF',
     width: 250,
@@ -63,15 +84,21 @@ export default estilo = StyleSheet.create({
   mainTitle : {
     fontSize : 24,
     fontWeight : "600",
+    // fontFamily : "BBHSansBartle-Regular",
   },
 
   secTitle : {
-    fontSize : 18,
+    fontSize : 20,
     fontWeight : "bold",
+    // fontFamily : "BBHSansBogle-Regular",
   },
 
   text16 : {
     fontSize : 16, 
+    fontWeight : "600"
+  },
+  text18 : {
+    fontSize : 18, 
     fontWeight : "600"
   },
 
