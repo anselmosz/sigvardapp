@@ -19,6 +19,7 @@ import RedefinirSenha from './components/RedefinirSenha/index';
 import EsqueceuSenha from './components/EsqueceuSenha/index';
 import Perfil from './components/Perfil/index';
 import Auth2fa from './components/Auth2fa/index';
+import Configuracoes from './components/Configuracoes/index';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,11 +31,12 @@ export default function App() {
           <Stack.Screen name='Splash' component={Splash}/>
           <Stack.Screen name='Login' component={Login}/>
           <Stack.Screen name='Signin' component={Signin}/>
+          <Stack.Screen name='Auth2fa' component={Auth2fa}/>
           <Stack.Screen name='EsqueceuSenha' component={EsqueceuSenha}/>
           <Stack.Screen name='RedefinirSenha' component={RedefinirSenha}/>
           <Stack.Screen name='MenuPrincipal' component={MenuPrincipal}/>
           <Stack.Screen name='Perfil' component={Perfil}/>
-          <Stack.Screen name='Auth2fa' component={Auth2fa}/>
+          <Stack.Screen name='Configuracoes' component={Configuracoes}/>
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

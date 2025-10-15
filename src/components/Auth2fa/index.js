@@ -19,7 +19,9 @@ export default props => { // Configurações da tela de LOGIN
 
     <View style={estilo.container}>
       <View style={[estilo.containerVertical, {backgroundColor : "#FFFCF9", width : '90%', boxShadow : "0px 5px 10px rgba(0,0,0,0.5)"}]}>
-        <Text style={[estilo.secTitle, {marginBottom : 16, textAlign : "center"}]}>Confirme o código que enviamos em seu email</Text>
+        
+        <Text style={[estilo.mainTitle, {marginBottom : 16, textAlign : "center"}]}>Verificaçã em duas etapas</Text>
+        <Text style={[estilo.secTitle, {marginBottom : 16, textAlign : "center"}]}>Digite o código que enviamos em seu email para seguir com a verificação</Text>
         
         <View style={estilo.boxInputHor}>
           <TextInput style={estilo.inputBoxUnique} placeholder='0'/>

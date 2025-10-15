@@ -37,6 +37,7 @@ export default estilo = StyleSheet.create({
     alignItems:"center",
     justifyContent: "center",
     gap: 8,
+    marginBottom: 20,
   },
 
   inputBoxUnique: {
@@ -82,8 +83,8 @@ export default estilo = StyleSheet.create({
   },  
 
   mainTitle : {
-    fontSize : 24,
-    fontWeight : "600",
+    fontSize : 26,
+    fontWeight : "bold",
     // fontFamily : "BBHSansBartle-Regular",
   },
 

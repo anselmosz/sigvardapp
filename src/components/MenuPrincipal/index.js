@@ -14,9 +14,8 @@ export default props => { // Configurações do MENU
 
       <View style={[estilo.containerGrid]}>
         <CardSquare route={'Chat'} cardIcon={'comments-o'} cardTitle={'Chat'} tamanho={150}/>
-        <CardSquare route={'Splash'} cardIcon={'sign-out'} cardTitle={'Sair'} tamanho={150}/>
-        <CardSquare route={'Perfil'} cardIcon={'user'} cardTitle={'Perfil'} tamanho={150}/>
-        <CardSquare route={'cONFIGURACOES'} cardIcon={'gear'} cardTitle={'Configurações'} tamanho={150}/>
+        {/* <CardSquare route={'Perfil'} cardIcon={'user'} cardTitle={'Perfil'} tamanho={150}/> */}
+        <CardSquare route={'Configuracoes'} cardIcon={'gear'} cardTitle={'Configurações'} tamanho={150}/>
       </View>
 
     </View>
