@@ -5,7 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Button } from '@react-navigation/elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import estilo from "../estilo";
-import CardSquare from '../CardSquare';
+import CardSquareIcon from '../CardSquareIcon';
+import CardSquareImage from '../CardSquareImage';
 
 
 export default props => { // Configurações do MENU
@@ -13,9 +14,41 @@ export default props => { // Configurações do MENU
     <View style={estilo.container}>
 
       <View style={[estilo.containerGrid]}>
-        <CardSquare route={'Chat'} cardIcon={'comments-o'} cardTitle={'Chat'} tamanho={150}/>
-        {/* <CardSquare route={'Perfil'} cardIcon={'user'} cardTitle={'Perfil'} tamanho={150}/> */}
-        <CardSquare route={'Configuracoes'} cardIcon={'gear'} cardTitle={'Configurações'} tamanho={150}/>
+        <CardSquareImage 
+          route={'Lanches'} 
+          cardTitle={'Lanches'} 
+          tamanho={190} 
+          caminhoDaImagem={require('../../assets/images/cheeseburger.png')}/>
+        
+        <CardSquareImage
+          route={''} 
+          cardTitle={'Acompanhamentos'} 
+          tamanho={190}
+          caminhoDaImagem={require('../../assets/images/fried-potatoes.png')}/>
+          
+        <CardSquareImage 
+          route={'Bebidas'} 
+          cardTitle={'Bebidas'} 
+          tamanho={190} 
+          caminhoDaImagem={require('../../assets/images/drinks.png')}/>
+
+        <CardSquareImage 
+          route={''} 
+          cardTitle={'Sobremesas'} 
+          tamanho={190} 
+          caminhoDaImagem={require('../../assets/images/panna-cotta.png')}/>
+
+        <CardSquareImage
+          route={''} 
+          cardTitle={'Acompanhamentos'} 
+          tamanho={190}
+          caminhoDaImagem={require('../../assets/images/fried-potatoes.png')}/>
+        
+        <CardSquareIcon 
+          route={'Configuracoes'} 
+          cardIcon={'gear'} 
+          cardTitle={'Configurações'} 
+          tamanho={190}/>
       </View>
 
     </View>

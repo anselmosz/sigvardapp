@@ -19,6 +19,8 @@ import RedefinirSenha from './components/RedefinirSenha/index';
 import EsqueceuSenha from './components/EsqueceuSenha/index';
 import Perfil from './components/Perfil/index';
 import Auth2fa from './components/Auth2fa/index';
+import Lanches from './components/Lanches/index';
+import Bebidas from './components/Bebidas/index';
 import Configuracoes from './components/Configuracoes/index';
 
 const Stack = createNativeStackNavigator();
@@ -35,8 +37,10 @@ export default function App() {
           <Stack.Screen name='EsqueceuSenha' component={EsqueceuSenha}/>
           <Stack.Screen name='RedefinirSenha' component={RedefinirSenha}/>
           <Stack.Screen name='MenuPrincipal' component={MenuPrincipal}/>
-          <Stack.Screen name='Perfil' component={Perfil}/>
+          <Stack.Screen name='Lanches' component={Lanches}/>
+          <Stack.Screen name='Bebidas' component={Bebidas}/>
           <Stack.Screen name='Configuracoes' component={Configuracoes}/>
+          <Stack.Screen name='Perfil' component={Perfil}/>
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

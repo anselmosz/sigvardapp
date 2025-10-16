@@ -14,9 +14,18 @@ export default CardSquare = ({route, cardIcon, cardTitle, tamanho}) => {
       <TouchableOpacity 
         onPress={() => {navigation.navigate(route)}}
         style={[estilo.btnLargeSquare, { backgroundColor : "#000", height : tamanho, width : tamanho }]}>
-        <Icon name={cardIcon} size={32} color="#FFF"/>
-        <Text style={{fontSize : 16, color : "#FFF", fontWeight : 500, textAlign : "center"}}>{cardTitle}</Text>
+        <Icon name={cardIcon} size={64} color="#FFF"/>
+        <Text style={estiloInterno.textoDoCard}>{cardTitle}</Text>
       </TouchableOpacity>
     </View>
   );
 }
+
+const estiloInterno = StyleSheet.create({
+  textoDoCard: {
+    fontSize : 18, 
+    color : "#FFF", 
+    fontWeight : 500,
+    textAlign : "center"
+  },
+})

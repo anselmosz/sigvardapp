@@ -3,13 +3,15 @@ import { StyleSheet, View, Text, TouchableOpacity, TextInput, Image } from 'reac
 import { createStaticNavigation, useNavigation, } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Button } from '@react-navigation/elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import estilo from "../estilo";
 import ActionListBtn from '../ActionListBtn';
 import BtnNavigate from '../BtnNavigate';
 import BtnPopToTop from '../BtnPopToTop';
 
 export default props => {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
+  const [displayConfiugracao, setDisplayConfiguracao] = React.useState("none");
 
   return(
     <View style={estilo.container}>
@@ -26,19 +28,50 @@ export default props => {
         <View style={[{gap: 20, marginVertical : 40, alignItems : 'flex-start'}]}>
           <ActionListBtn
             iconName={'user-circle'} 
-            titulo={'Edit profile'}
+            titulo={'Conta'}
             configInternal={
               <BtnNavigate corFundo={"#000"} corTexto={"#fff"} titulo={"Texto"} route={'MenuPrincipal'}/>
             }/>
 
-            {/* <ActionListBtn
-            iconName={'sign-out'} 
-            titulo={'Sair'}
+          <ActionListBtn
+            iconName={'bell'} 
+            titulo={'Notificações'}
             configInternal={
-              <BtnNavigate corFundo={"#000"} corTexto={"#fff"} titulo={"Sair da conta"} route={'Login'}/>
-            }/> */}
+              <BtnNavigate corFundo={"#000"} corTexto={"#fff"} titulo={"Texto"} route={'MenuPrincipal'}/>
+            }/>
+
+          <ActionListBtn
+            iconName={'map-marker'} 
+            titulo={'Endereço'}
+            configInternal={
+              <BtnNavigate corFundo={"#000"} corTexto={"#fff"} titulo={"Texto"} route={'MenuPrincipal'}/>
+            }/>
+
+          <ActionListBtn
+            iconName={'sign-out'} 
+            titulo={'Sair do app'}
+            configInternal={
+              <>
+                <BtnNavigate corFundo={"#000"} corTexto={"#fff"} titulo={"Sair do app"} route={'Splash'}/>
+                <BtnPopToTop corFundo={"#000"} corTexto={"#c51a1a"} titulo={"Encerrar sessão"} />
+              </>
+            }/>
         </View>
       </View>
     </View>
   );
 }
+
+const estiloInterno = StyleSheet.create({
+  containerView : {
+    width: 380, 
+    backgroundColor: "#fff", 
+    borderRadius: 10, paddingVertical: 14, 
+    paddingHorizontal: 40,
+  },
+  cardView : {
+    alignItems : 'center',
+    flexDirection : 'row', 
+    justifyContent : 'space-between'
+  },
+})

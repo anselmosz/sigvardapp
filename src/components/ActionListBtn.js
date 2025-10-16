@@ -9,19 +9,23 @@ import estilo from "./estilo";
 export default ActionListBtn = ({iconName, titulo, configInternal}) => {
   const navigation = useNavigation();
   const [displayConfiugracao, setDisplayConfiguracao] = React.useState("none");
-  let opcoesDoCard = configInternal;
+  const [iconeExpandir, setIconeExpandir] = React.useState("angle-right");
 
   return(
     <View style={estiloInterno.containerView}>
-      <TouchableOpacity 
-        onPress={() => {displayConfiugracao == "none" ? setDisplayConfiguracao("flex") : setDisplayConfiguracao("none")}}
-        style={estiloInterno.cardView}>
-        <Icon name={iconName} size={30}/>
-        <Text style={estilo.secTitle}>{titulo}</Text>
-        <Icon name="angle-right" size={26}/>
-      </TouchableOpacity>
-      <View style={{display : displayConfiugracao, marginTop : 16}}>
-        {opcoesDoCard}
+      <View style={estiloInterno.cardView}>
+        <View style={[estiloInterno.cardView, {gap : 16}]}>
+          <Icon name={iconName} size={30}/>
+          <Text style={estilo.secTitle}>{titulo}</Text>
+        </View>
+        <TouchableOpacity
+          onPressIn={() => {displayConfiugracao == "none" ? setDisplayConfiguracao("flex") & setIconeExpandir("angle-down") : setDisplayConfiguracao("none") & setIconeExpandir("angle-right")}}
+          style={estiloInterno.cardView}>
+          <Icon name={iconeExpandir} size={26}/>
+        </TouchableOpacity>
+      </View>
+      <View style={{display : displayConfiugracao, marginTop : 16, gap: 8}}>
+        {configInternal}
       </View>
     </View>
   )
