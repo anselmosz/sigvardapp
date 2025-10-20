@@ -22,6 +22,12 @@ export default props => { // Configurações do MENU
         
         <CardSquareImage
           route={''} 
+          cardTitle={'Combos'} 
+          tamanho={190}
+          caminhoDaImagem={require('../../assets/images/combo.png')}/>
+        
+        <CardSquareImage
+          route={''} 
           cardTitle={'Acompanhamentos'} 
           tamanho={190}
           caminhoDaImagem={require('../../assets/images/fried-potatoes.png')}/>
@@ -38,11 +44,6 @@ export default props => { // Configurações do MENU
           tamanho={190} 
           caminhoDaImagem={require('../../assets/images/panna-cotta.png')}/>
 
-        <CardSquareImage
-          route={''} 
-          cardTitle={'Acompanhamentos'} 
-          tamanho={190}
-          caminhoDaImagem={require('../../assets/images/fried-potatoes.png')}/>
         
         <CardSquareIcon 
           route={'Configuracoes'} 

@@ -5,13 +5,15 @@
  * @format
  */
 
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet } from 'react-native';
 import { SafeAreaView, } from 'react-native-safe-area-context';
 
 import Splash from './components/Splash/index'
+import BottomNav from './components/BottomNav/index'
 import Login from './components/Login/index'
 import MenuPrincipal from './components/MenuPrincipal/index'
 import Signin from './components/Signin/index';
@@ -22,14 +24,18 @@ import Auth2fa from './components/Auth2fa/index';
 import Lanches from './components/Lanches/index';
 import Bebidas from './components/Bebidas/index';
 import Configuracoes from './components/Configuracoes/index';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <SafeAreaView style={estiloInterno.container}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Splash'>
+        <BottomNav/>
+        {/* <Stack.Navigator initialRouteName='Splash'>
+          <Stack.Screen name='BottomNav' component={BottomNav} options={{headerShown: false}}/>
           <Stack.Screen name='Splash' component={Splash}/>
           <Stack.Screen name='Login' component={Login}/>
           <Stack.Screen name='Signin' component={Signin}/>
@@ -41,7 +47,7 @@ export default function App() {
           <Stack.Screen name='Bebidas' component={Bebidas}/>
           <Stack.Screen name='Configuracoes' component={Configuracoes}/>
           <Stack.Screen name='Perfil' component={Perfil}/>
-        </Stack.Navigator>
+        </Stack.Navigator> */}
       </NavigationContainer>
     </SafeAreaView>
   );
