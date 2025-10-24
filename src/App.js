@@ -12,18 +12,21 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet } from 'react-native';
 import { SafeAreaView, } from 'react-native-safe-area-context';
 
-import Splash from './components/Splash/index'
-import BottomNav from './components/BottomNav/index'
-import Login from './components/Login/index'
-import MenuPrincipal from './components/MenuPrincipal/index'
-import Signin from './components/Signin/index';
-import RedefinirSenha from './components/RedefinirSenha/index';
-import EsqueceuSenha from './components/EsqueceuSenha/index';
-import Perfil from './components/Perfil/index';
-import Auth2fa from './components/Auth2fa/index';
-import Lanches from './components/Lanches/index';
-import Bebidas from './components/Bebidas/index';
-import Configuracoes from './components/Configuracoes/index';
+import Splash from './components/Splash/'
+import BottomNav from './components/BottomNav/'
+import Login from './components/Login/'
+import MenuPrincipal from './components/MenuPrincipal/'
+import Signin from './components/Signin/';
+import RedefinirSenha from './components/RedefinirSenha/';
+import EsqueceuSenha from './components/EsqueceuSenha/';
+import Perfil from './components/Perfil/';
+import Auth2fa from './components/Auth2fa/';
+import Lanches from './components/Lanches/';
+import Bebidas from './components/Bebidas/';
+import Configuracoes from './components/Configuracoes/';
+import DrawerTab from './components/DrawerTab/';
+import AppDrawerNav from './Navegacao/AppDrawerNav';
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Stack = createNativeStackNavigator();
@@ -33,7 +36,9 @@ export default function App() {
   return (
     <SafeAreaView style={estiloInterno.container}>
       <NavigationContainer>
-        <BottomNav/>
+        <AppDrawerNav/>
+        {/* <BottomNav/> */}
+        {/* <DrawerTab/> */}
         {/* <Stack.Navigator initialRouteName='Splash'>
           <Stack.Screen name='BottomNav' component={BottomNav} options={{headerShown: false}}/>
           <Stack.Screen name='Splash' component={Splash}/>

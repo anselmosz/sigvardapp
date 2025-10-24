@@ -45,11 +45,11 @@ export default props => { // Configurações do MENU
           caminhoDaImagem={require('../../assets/images/panna-cotta.png')}/>
 
         
-        <CardSquareIcon 
-          route={'Configuracoes'} 
-          cardIcon={'gear'} 
-          cardTitle={'Configurações'} 
-          tamanho={190}/>
+        <CardSquareImage 
+          route={''} 
+          cardTitle={'Meus Pedidos'} 
+          tamanho={190} 
+          caminhoDaImagem={require('../../assets/images/delivery-man.png')}/>
       </View>
 
     </View>
